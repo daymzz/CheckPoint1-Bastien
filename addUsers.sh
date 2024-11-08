@@ -4,11 +4,11 @@ create_user () {
 # Répétition de la création jusqu'au dernier argument
 while [ $# -ne "0" ]
 do
-        # Vérification de l'existence de l'utilisateur. Si il n'existe pas, il sera créer
+        # Vérification de l'existence de l'utilisateur. Si il n'existe pas, il sera créé
         id -u $1 > /dev/null
         if [ $? = "1" ]
         then
-                sudo adduser $1 && echo "L'utilisateur $1 a été créer avec succès."
+                sudo adduser $1 && echo "L'utilisateur $1 a été créé avec succès."
         else
                 echo " L'utilisateur $1 existe déjà, échec de la création."
         fi
